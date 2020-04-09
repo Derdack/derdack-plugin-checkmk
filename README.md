@@ -28,7 +28,7 @@ In the following we describe the setup and configuration of the Enterprise Alert
 
 4. Create a Notification Rule and configure Enterprise Alert as Notification Method. You would need to set the REST API URL and your API Key. Also select one user in order to trigger the rule. Please note that the alert notification is sent as an event to Enterprise Alert. You can create an alert policy then according to your needs.
 
-![Notifications](checkmk_notifictions.png)
+![Notifications](checkmk_notifications.png)
 
 6. Now you can test it by simulating an alert in checkmk. When checkmk detects an issue, the information will be forwarded to your SIGNL4 team.
 
