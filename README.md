@@ -30,7 +30,7 @@ In the following we describe the setup and configuration of the Enterprise Alert
 
 ![Notifications](checkmk_notifications.png)
 
-6. Now you can test it by simulating an alert in checkmk. When checkmk detects an issue, the information will be forwarded to your SIGNL4 team.
+6. Now you can test it by simulating an alert in checkmk. When checkmk detects an issue, the information is forwarded as an event to Enterprise Alert where your alert policy can then trigger the alert.
 
 You can find the package on GitHub:
 https://github.com/derdack/derdack-integration-checkmk
