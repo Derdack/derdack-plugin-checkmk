@@ -20,7 +20,7 @@ In the following we describe the setup and configuration of the Enterprise Alert
 
 ![REST API](ea_rest.png)
 
-2. Get the Enterprise Alert package (EnterpriseAlert-1.0.mkp) for checkmk from GitHub (https://github.com/derdack/derdack-integration-checkmk).
+2. Get the Enterprise Alert package (EnterpriseAlert-1.0.mkp) for checkmk from GitHub (https://github.com/derdack/derdack-plugin-checkmk).
 
 3. Upload the .mkp file in the checkmk portal under Extension Packages.
 
@@ -33,4 +33,4 @@ In the following we describe the setup and configuration of the Enterprise Alert
 6. Now you can test it by simulating an alert in checkmk. When checkmk detects an issue, the information is forwarded as an event to Enterprise Alert where your alert policy can then trigger the alert.
 
 You can find the package on GitHub:
-https://github.com/derdack/derdack-integration-checkmk
+https://github.com/derdack/derdack-plugin-checkmk
