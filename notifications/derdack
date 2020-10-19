@@ -103,12 +103,10 @@ def send_alert(url, password, message):
 
     resp = requests.post(url + '?apiKey=' + password, params=None, data=json.dumps(message))
 
-    if resp.status_code == 200:
-        result = resp.text.split("\t")
-        if result.find('eventId') == -1:
-            sys.stdout.write(result)
-            return 0
-        
+    if resp.status_code == 201:
+        sys.stdout.write(result)
+        return 0
+
     sys.stderr.write(resp.text)
     return 2
 
@@ -116,10 +114,11 @@ def send_update(url, password, message):
 
     resp = requests.post(url + '/' + message['ExternalID'] + '/reset?apiKey=' + password, params=None, data=json.dumps(message))
 
-    if resp.status_code == 200:
+    if resp.status_code == 201:
         return 0
         
     sys.stderr.write(resp.text)
     return 2
 
 sys.exit(main())
+
