@@ -104,7 +104,6 @@ def send_alert(url, password, message):
     resp = requests.post(url + '?apiKey=' + password, params=None, data=json.dumps(message))
 
     if resp.status_code == 201:
-        sys.stdout.write(result)
         return 0
 
     sys.stderr.write(resp.text)
@@ -116,7 +115,7 @@ def send_update(url, password, message):
 
     if resp.status_code == 201:
         return 0
-        
+
     sys.stderr.write(resp.text)
     return 2
 
