@@ -32,5 +32,9 @@ In the following we describe the setup and configuration of the Enterprise Alert
 
 6. Now you can test it by simulating an alert in checkmk. When checkmk detects an issue, the information is forwarded as an event to Enterprise Alert where your alert policy can then trigger the alert.
 
+## Two-Way
+
+Under /2-way/Main.js you can find the script for communicating status updates from Enterprise Alert back to Checkmk. This supports, acknowledging, closing and annotating alerts.
+
 You can find the package on GitHub:
 https://github.com/derdack/derdack-integration-checkmk
