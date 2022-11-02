@@ -357,7 +357,7 @@ function checkmkCheckConnection() {
 	  url: strCheckmkURL + "objects/host_config/FakeHostForTesting",
 	  headers: {
 		  'Accept': 'application/json',
-		  'Bearer ' + username + ' ' + password
+		  'Authorization': 'Bearer ' + username + ' ' + password
 	  }
 	};
 
