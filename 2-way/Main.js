@@ -108,7 +108,7 @@ async function onSubscriptionEvent(event)
 		var eventId = event.alert.externalEventId;
 		Logger.writeLog(fnName, "Value EventID: " + eventId);
 				
-		// Exit if no ZabbixEventID found
+		// Exit if no CheckmkEventID found
 		if (eventId == "") {
 			return true;
 		}
