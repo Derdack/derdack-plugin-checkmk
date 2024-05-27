@@ -2,7 +2,7 @@
 # Enterprise Alert
 # -*- encoding: utf-8; py-indent-offset: 4 -*-
 
-# (c) 2021 Derdack GmbH
+# (c) 2024 Derdack GmbH
 #          Derdack Support <support@derdack.com>
 
 # This is free software;  you can redistribute it and/or modify it
@@ -56,7 +56,7 @@ def get_text(context):
     description = notification_type + ' on ' + host_name
     service_problem_id = ''
     
-    host_problem_id = context['HOSTPROBLEMID']
+    host_problem_id = context.get('HOSTPROBLEMID') or ''
     date_time = context['SHORTDATETIME']
 
     # Prepare Default information and Type PROBLEM, RECOVERY
@@ -120,3 +120,4 @@ def send_update(url, password, message):
     return 2
 
 sys.exit(main())
+
